@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		79245AD824A9FE29005A19EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79245AD724A9FE29005A19EB /* AppDelegate.swift */; };
-		79245ADA24A9FE29005A19EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79245AD924A9FE29005A19EB /* SceneDelegate.swift */; };
 		79245ADC24A9FE29005A19EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79245ADB24A9FE29005A19EB /* ViewController.swift */; };
 		79245ADF24A9FE29005A19EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79245ADD24A9FE29005A19EB /* Main.storyboard */; };
 		79245AE124A9FE2A005A19EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79245AE024A9FE2A005A19EB /* Assets.xcassets */; };
 		79245AE424A9FE2A005A19EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79245AE224A9FE2A005A19EB /* LaunchScreen.storyboard */; };
+		798A418624AC736300FBE9A8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A418524AC736300FBE9A8 /* CollectionViewController.swift */; };
+		798A418824AC7A2F00FBE9A8 /* CollectionViewTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A418724AC7A2F00FBE9A8 /* CollectionViewTextCell.swift */; };
+		798A418A24AC7AB000FBE9A8 /* CollectionViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 798A418924AC7AB000FBE9A8 /* CollectionViewTextCell.xib */; };
+		798A418C24AC82E000FBE9A8 /* CarouselCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A418B24AC82E000FBE9A8 /* CarouselCollectionViewController.swift */; };
+		798A419024AC835B00FBE9A8 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798A418F24AC835B00FBE9A8 /* CarouselCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79245AD424A9FE29005A19EB /* FindTheBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindTheBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79245AD724A9FE29005A19EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79245AD924A9FE29005A19EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		79245ADB24A9FE29005A19EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79245ADE24A9FE29005A19EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79245AE024A9FE2A005A19EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79245AE324A9FE2A005A19EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79245AE524A9FE2A005A19EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		798A418524AC736300FBE9A8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		798A418724AC7A2F00FBE9A8 /* CollectionViewTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTextCell.swift; sourceTree = "<group>"; };
+		798A418924AC7AB000FBE9A8 /* CollectionViewTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewTextCell.xib; sourceTree = "<group>"; };
+		798A418B24AC82E000FBE9A8 /* CarouselCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewController.swift; sourceTree = "<group>"; };
+		798A418F24AC835B00FBE9A8 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				79245AD724A9FE29005A19EB /* AppDelegate.swift */,
-				79245AD924A9FE29005A19EB /* SceneDelegate.swift */,
 				79245ADB24A9FE29005A19EB /* ViewController.swift */,
 				79245ADD24A9FE29005A19EB /* Main.storyboard */,
 				79245AE024A9FE2A005A19EB /* Assets.xcassets */,
 				79245AE224A9FE2A005A19EB /* LaunchScreen.storyboard */,
 				79245AE524A9FE2A005A19EB /* Info.plist */,
+				798A418524AC736300FBE9A8 /* CollectionViewController.swift */,
+				798A418724AC7A2F00FBE9A8 /* CollectionViewTextCell.swift */,
+				798A418924AC7AB000FBE9A8 /* CollectionViewTextCell.xib */,
+				798A418B24AC82E000FBE9A8 /* CarouselCollectionViewController.swift */,
+				798A418F24AC835B00FBE9A8 /* CarouselCell.swift */,
 			);
 			path = FindTheBug;
 			sourceTree = "<group>";
@@ -128,6 +140,7 @@
 				79245AE424A9FE2A005A19EB /* LaunchScreen.storyboard in Resources */,
 				79245AE124A9FE2A005A19EB /* Assets.xcassets in Resources */,
 				79245ADF24A9FE29005A19EB /* Main.storyboard in Resources */,
+				798A418A24AC7AB000FBE9A8 /* CollectionViewTextCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				798A418C24AC82E000FBE9A8 /* CarouselCollectionViewController.swift in Sources */,
+				798A418824AC7A2F00FBE9A8 /* CollectionViewTextCell.swift in Sources */,
+				798A418624AC736300FBE9A8 /* CollectionViewController.swift in Sources */,
 				79245ADC24A9FE29005A19EB /* ViewController.swift in Sources */,
+				798A419024AC835B00FBE9A8 /* CarouselCell.swift in Sources */,
 				79245AD824A9FE29005A19EB /* AppDelegate.swift in Sources */,
-				79245ADA24A9FE29005A19EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -287,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RA9SY3QH49;
 				INFOPLIST_FILE = FindTheBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RA9SY3QH49;
 				INFOPLIST_FILE = FindTheBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
