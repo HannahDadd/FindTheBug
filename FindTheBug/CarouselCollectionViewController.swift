@@ -20,6 +20,10 @@ class CarouselCollectionViewController: UICollectionViewController {
         super.init(collectionViewLayout: layout)
     }
 
+    deinit {
+        print("Carousel collection view controller has been deinitialised... 😬")
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -29,33 +33,30 @@ class CarouselCollectionViewController: UICollectionViewController {
         let nib = UINib(nibName: "CollectionViewTextCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         collectionView.backgroundColor = .white
+        collectionView.allowsSelection = true
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collectionViewCell: CollectionViewTextCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewTextCell
-        collectionViewCell.configure(accesibilityString: items[indexPath.item])
-        collectionViewCell.delegate = self
-        return collectionViewCell
-    }
+    override func collectionView(_ collectionView: UICollectionView,
+                                 cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Alert!", message: "It's Alert From Cell", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
+        let collectionViewCell: CollectionViewTextCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewTextCell
+        collectionViewCell.delegate = self
+        collectionViewCell.configure(accesibilityString: items[indexPath.item])
+        return collectionViewCell
     }
 }
 
 extension CarouselCollectionViewController: CollectionViewTextCellDelegate {
-    func buttonPressed() {
+
+    func cellTapped() {
 
         let alert = UIAlertController(title: "Alert!", message: "It's Alert From Cell", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
 }

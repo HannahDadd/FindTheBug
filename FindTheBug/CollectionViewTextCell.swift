@@ -6,32 +6,27 @@
 //  Copyright © 2020 hannah. All rights reserved.
 //
 
-import Foundation
-import SwiftUI
+import UIKit
 
-protocol CollectionViewTextCellDelegate : AnyObject {
-    func buttonPressed()
+protocol CollectionViewTextCellDelegate: AnyObject {
+    func cellTapped()
 }
 
 class CollectionViewTextCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
-    var button : UIButton?
 
     weak var delegate: CollectionViewTextCellDelegate?
-
-    deinit {
-        print("uh oh")
-    }
-
-    @IBAction func buttonPressed(_ sender: Any) {
-        delegate?.buttonPressed()
-    }
 
     func configure(accesibilityString: String) {
         self.accessibilityLabel = accesibilityString
         self.label.text = accesibilityString
+        backgroundColor = .red
 
-        let uiGestureRecogniser = UIGestureRecognizer(target: self, action: #selector(buttonPressed(_:)))
-        label.addGestureRecognizer(uiGestureRecogniser)
+        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
+        addGestureRecognizer(gestureRecogniser)
+    }
+
+    @objc func cellTapped() {
+        delegate?.cellTapped()
     }
 }
