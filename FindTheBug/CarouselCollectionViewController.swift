@@ -38,6 +38,24 @@ class CarouselCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectionViewCell: CollectionViewTextCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewTextCell
         collectionViewCell.configure(accesibilityString: items[indexPath.item])
+        collectionViewCell.delegate = self
         return collectionViewCell
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Alert!", message: "It's Alert From Cell", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension CarouselCollectionViewController: CollectionViewTextCellDelegate {
+    func buttonPressed() {
+
+        let alert = UIAlertController(title: "Alert!", message: "It's Alert From Cell", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
